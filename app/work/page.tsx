@@ -4,40 +4,45 @@ import Figure01 from "@/components/Figure01";
 import Hero from "@/components/Hero";
 import Image from "next/image";
 import React, { useEffect, useState, useCallback } from "react";
-import { useRouter, useSearchParams, usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 type WorkType = "export" | "import" | "fta" | "drawback" | "inspection" | "compliance";
 
 export default function WorkPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
   const pathname = usePathname();
 
   const [isType, setType] = useState<WorkType>("export");
 
-  // ✅ URL ?type= 값으로 초기 타입 세팅
+  // ✅ URL ?type= 값으로 초기 타입 세팅 (클라이언트에서만)
   useEffect(() => {
-    const typeParam = searchParams.get("type") as WorkType | null;
+    if (typeof window === "undefined") return;
 
-    if (typeParam && ["export", "import", "fta", "drawback", "inspection", "compliance"].includes(typeParam)) {
+    const params = new URLSearchParams(window.location.search);
+    const typeParam = params.get("type") as WorkType | null;
+    const allowed: WorkType[] = ["export", "import", "fta", "drawback", "inspection", "compliance"];
+
+    if (typeParam && allowed.includes(typeParam)) {
       setType(typeParam);
     }
-  }, [searchParams]);
+  }, []);
 
   // ✅ 상태 + URL 둘 다 변경
   const SelectType = useCallback(
     (value: WorkType) => {
       setType(value);
 
-      const params = new URLSearchParams(searchParams.toString());
-      params.set("type", value);
+      if (typeof window !== "undefined") {
+        const params = new URLSearchParams(window.location.search);
+        params.set("type", value);
 
-      // /work?type=import 이런 식으로 URL 갱신 (스크롤 유지)
-      router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+        // /work?type=import 이런 식으로 URL 갱신 (스크롤 유지)
+        router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+      }
 
       console.log("next:", value);
     },
-    [router, pathname, searchParams]
+    [router, pathname]
   );
 
   useEffect(() => {
@@ -98,15 +103,7 @@ export default function WorkPage() {
             </div>
 
             <div className="relative w-full h-[450px] md:h-[600px]">
-              <Image
-                src="/img/수출통관_절차.png"
-                alt="수출통관 절차"
-                fill
-                quality={100}
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 1200px"
-                // placeholder="blur" blurDataURL="/img/수출통관_절차_small.png" // 있으면 사용
-              />
+              <Image src="/img/수출통관_절차.png" alt="수출통관 절차" fill quality={100} className="object-contain" sizes="(max-width: 768px) 100vw, 1200px" />
             </div>
           </div>
 
@@ -142,15 +139,7 @@ export default function WorkPage() {
             </div>
 
             <div className="relative w-full h-[450px] md:h-[600px]">
-              <Image
-                src="/img/수입통관_절차.png"
-                alt="수입통관 절차"
-                fill
-                quality={100}
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 1200px"
-                // placeholder="blur" blurDataURL="/img/수출통관_절차_small.png" // 있으면 사용
-              />
+              <Image src="/img/수입통관_절차.png" alt="수입통관 절차" fill quality={100} className="object-contain" sizes="(max-width: 768px) 100vw, 1200px" />
             </div>
           </div>
 
@@ -223,15 +212,7 @@ LK 관세사무소는 이러한 FTA 협정을 통해 고객사가 수출입 거�
             </div>
 
             <div className="relative w-full h-[450px] md:h-[600px]">
-              <Image
-                src="/img/관세환급_절차.png"
-                alt="수입통관 절차"
-                fill
-                quality={100}
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 1200px"
-                // placeholder="blur" blurDataURL="/img/수출통관_절차_small.png" // 있으면 사용
-              />
+              <Image src="/img/관세환급_절차.png" alt="수입통관 절차" fill quality={100} className="object-contain" sizes="(max-width: 768px) 100vw, 1200px" />
             </div>
           </div>
 
@@ -270,15 +251,7 @@ LK 관세사무소는 이러한 FTA 협정을 통해 고객사가 수출입 거�
             </div>
 
             <div className="relative w-full h-[200px] md:h-[200px]">
-              <Image
-                src="/img/식품_절차.png"
-                alt="식품 절차"
-                fill
-                quality={100}
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 1200px"
-                // placeholder="blur" blurDataURL="/img/수출통관_절차_small.png" // 있으면 사용
-              />
+              <Image src="/img/식품_절차.png" alt="식품 절차" fill quality={100} className="object-contain" sizes="(max-width: 768px) 100vw, 1200px" />
             </div>
 
             <h4>[ 검사유형 ]</h4>
@@ -305,7 +278,7 @@ LK 관세사무소는 이러한 FTA 협정을 통해 고객사가 수출입 거�
         </section>
       )}
 
-      {/* 식품검역등 요건대행 */}
+      {/* 식품검역등 요건대행 (compliance) */}
       {isType === "compliance" && (
         <section className="pt-10 mb-32 max-w-[1440px] mx-auto flex flex-col gap-20">
           <Figure01
@@ -322,15 +295,7 @@ LK 관세사무소는 이러한 FTA 협정을 통해 고객사가 수출입 거�
             </div>
 
             <div className="relative w-full h-[200px] md:h-[200px]">
-              <Image
-                src="/img/식품_절차.png"
-                alt="식품 절차"
-                fill
-                quality={100}
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 1200px"
-                // placeholder="blur" blurDataURL="/img/수출통관_절차_small.png" // 있으면 사용
-              />
+              <Image src="/img/식품_절차.png" alt="식품 절차" fill quality={100} className="object-contain" sizes="(max-width: 768px) 100vw, 1200px" />
             </div>
 
             <h4>[ 검사유형 ]</h4>
@@ -356,6 +321,7 @@ LK 관세사무소는 이러한 FTA 협정을 통해 고객사가 수출입 거�
           </div>
         </section>
       )}
+
       <section>
         <Contact />
       </section>
