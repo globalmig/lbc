@@ -11,8 +11,9 @@ export default function Footer() {
       </Link>
 
       <p className="text-sm">주소: 서울시 강남구 테헤란로 20길 18 부봉빌딩 6층, 608호</p>
+      <p className="text-sm">카톡 ID: lkcus</p>
       <p className="text-sm">전화: 02-552-2893</p>
-      <p className="text-sm">이메일: lek9740@naver.com</p>
+      <p className="text-sm">이메일: admin@lkcustoms.co.kr</p>
       <p className="mt-4 text-sm">© 2025 LK 관세사무소 INDUSTRY. All rights reserved.</p>
       <p className="text-sm">DESIGN & Development BY GLOBAL MIG</p>
     </div>

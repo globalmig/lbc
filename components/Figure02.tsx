@@ -24,7 +24,7 @@ export default function Figure02(item: Figure01Props) {
           <h3 className="text-2xl md:text-4xl  leading-snug">
             <strong className="text-cyan-800">이은경</strong> 대표 관세사
           </h3>
-          <p className="text-4xl my-5 mb-10 font-bold text-black/20">Biography</p>
+          <p className="text-4xl my-5 mb-10 font-bold text-black/20">Profile</p>
           <div className="w-10 h-[0.4px] mx-auto mb-12 bg-black/20"></div>
           {/* 배열이면 리스트, 아니면 문단 */}
           {Array.isArray(item.description) ? (

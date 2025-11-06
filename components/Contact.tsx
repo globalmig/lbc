@@ -8,7 +8,8 @@ export default function Contact() {
       <div className="relative px-4 flex-1 flex flex-col justify-center max-w-[1440px]   w-full mx-auto text-white">
         <h3>Contact Us</h3>
         <h2 className="mt-4">1:1 상담 문의</h2>
-        <p>"많은 고객보다 소수만 맡아 대표가 직접 책임지겠다"는 마음으로 신의와 성실을 지키는 관세 파트너가 되겠습니다.</p>
+        <p>“많은 고객보다는, 소수만 맡아 대표가 직접 고객의 업무를 수행하고 책임지겠습니다.”</p>
+        <p>LK 관세사무소는 고객이 복잡한 수출입 절차에서 걱정 없이 비즈니스에만 집중할 수 있도록 돕는 든든한 파트너가 되겠습니다.</p>
         <p>LK 관세사무소에 궁금한 사항이 있으시면 문의주세요.</p>
         <Link href={"/board"} className="border-2 rounded-md py-2 px-14 mt-10 bg-white text-zinc-700 hover:bg-gray-200 text-center font-semibold shadow-sm w-full md:max-w-[180px]">
           문의하기
