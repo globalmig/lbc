@@ -59,7 +59,7 @@ export default function Board() {
   return (
     <>
       <section>
-        <Hero title={"문의 게시판"} subtitle={"고객님의 문의사항을 확인하실 수 있습니다."} img={"/img/bg_work_solutions03.jpg"} />
+        <Hero title={"문의 게시판"} subtitle={"고객님의 문의사항을 확인하실 수 있습니다."} img={"/img/bg_work_solutions03.jpg"} priority />
       </section>
 
       <section className="mx-auto w-full max-w-[1000px] px-4 py-10">

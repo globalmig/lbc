@@ -86,7 +86,7 @@ export default function EditPage({ params }: { params: { id: string } }) {
     return (
       <>
         <section>
-          <Hero title={"문의 수정"} subtitle={"문의 내용을 수정합니다."} img={"/img/bg_work_solutions03.jpg"} />
+          <Hero title={"문의 수정"} subtitle={"문의 내용을 수정합니다."} img={"/img/bg_work_solutions03.jpg"} priority />
         </section>
         <section className="mx-auto w-full max-w-[1000px] flex flex-col items-end px-4 gap-5">
           <div className="w-full mt-10 flex flex-col gap-6 text-center">

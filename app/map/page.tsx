@@ -8,7 +8,7 @@ export default function Map() {
   return (
     <>
       <section className="mb-40">
-        <Hero title={"자료실"} subtitle={"LK 관세사무소 블로그에서 자료들을 확인해보실 수 있습니다"} img={"/img/bg_work_solutions04.jpg"} />
+        <Hero title={"자료실"} subtitle={"LK 관세사무소 블로그에서 자료들을 확인해보실 수 있습니다"} img={"/img/bg_work_solutions04.jpg"} priority />
       </section>
       <section className="flex flex-col justify-center items-center mb-40 gap-4">
         <h2>관련 자료를 확인해 보세요</h2>

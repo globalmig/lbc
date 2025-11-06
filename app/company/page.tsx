@@ -9,7 +9,7 @@ export default function company() {
   return (
     <>
       <section>
-        <Hero title={"회사소개"} subtitle={"소수 관리 LK 관세사무소입니다."} img={"/img/bg_work_search.jpg"} />
+        <Hero title={"회사소개"} subtitle={"소수 관리 LK 관세사무소입니다."} img={"/img/bg_work_search.jpg"} priority />
         {/* TODO: 회사 소개 */}
       </section>
 
@@ -34,7 +34,7 @@ export default function company() {
       <section className="relative min-h-[720px] md:min-h-[800px] text-white py-14 md:py-20 flex items-center">
         {/* 배경 이미지 */}
         <div className="absolute inset-0 overflow-hidden">
-          <Image src="/img/bg_ceo.jpg" alt="Hero Image" fill sizes="100vw" className="object-cover object-top blur-sm" priority />
+          <Image src="/img/bg_ceo.jpg" alt="Hero Image" fill sizes="100vw" className="object-cover object-top blur-sm" />
           {/* 반투명 오버레이 */}
           <div className="absolute inset-0 bg-[#1b2030]/80 md:bg-[#1b2030]/70 pointer-events-none" />
           {/* 하단 가독성 보강용 그라디언트(선택) */}

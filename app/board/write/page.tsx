@@ -49,7 +49,7 @@ export default function Write() {
   return (
     <>
       <section>
-        <Hero title={"문의 등록"} subtitle={"궁금하신 점이 있으시면 편하게 문의 남겨주세요."} img={"/img/bg_work_solutions03.jpg"} />
+        <Hero title={"문의 등록"} subtitle={"궁금하신 점이 있으시면 편하게 문의 남겨주세요."} img={"/img/bg_work_solutions03.jpg"} priority />
       </section>
 
       <section className="mx-auto w-full max-w-[1000px] flex flex-col items-end px-4 gap-5 ">

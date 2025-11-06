@@ -69,7 +69,7 @@ export default function Page({ params }: { params: { id: string } }) {
     return (
       <>
         <section>
-          <Hero title={"문의내용"} subtitle={"게시글 비밀번호를 입력해주세요."} img={"/img/bg_work_solutions03.jpg"} />
+          <Hero title={"문의내용"} subtitle={"게시글 비밀번호를 입력해주세요."} img={"/img/bg_work_solutions03.jpg"} priority />
         </section>
 
         <section className="mx-auto w-full max-w-[1000px] flex flex-col items-center px-4 gap-5 min-h-96 mb-32 ">

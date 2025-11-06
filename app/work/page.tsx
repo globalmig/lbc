@@ -55,7 +55,7 @@ export default function WorkPage() {
   return (
     <>
       <section>
-        <Hero title={"업무영역"} subtitle={"LK 관세사무소 업무 영역입니다."} img={"/img/bg_work_solutions.jpg"} />
+        <Hero title={"업무영역"} subtitle={"LK 관세사무소 업무 영역입니다."} img={"/img/bg_work_solutions.jpg"} priority />
       </section>
 
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-[1440px] mx-auto mt-10 md:mt-20 px-4">
