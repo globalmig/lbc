@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "LK 관세사무소",
     images: [
       {
-        url: "/og_image.jpg", // og 이미지 (public 폴더에)
+        url: "/img/SEO.jpg", // og 이미지 (public 폴더에)
         width: 1200,
         height: 630,
         alt: "LK 관세사무소 대표 이미지",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "LK 관세사무소 | 수출입 통관·FTA·관세환급 전문",
     description: "수출입 통관 및 FTA 컨설팅 전문, 관세 환급과 식품검역까지 한 번에.",
-    images: ["/og_image.jpg"],
+    images: ["/img/SEO.jpg"],
   },
   alternates: {
     canonical: "https://www.lkcustoms.co.kr",
@@ -65,6 +65,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
+  },
+  other: {
+    "naver-site-verification": "ac9ff0ce060a869f0f1826783d8ee5567fe32814",
   },
 };
 
