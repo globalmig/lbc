@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "pretendard/dist/web/static/pretendard.css";
+html,
+body {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -98,8 +104,6 @@
     --chart-5: 340 75% 55%;
   }
 }
-
-
 
 @layer base {
   * {
