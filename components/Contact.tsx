@@ -15,9 +15,9 @@ export default function Contact() {
           카톡 ID: lkcus <br />
         </p>
 
-        <p className="mt-4 hover:font-bold">admin@lkcustoms.co.kr</p>
+        <p className="mt-4 hover:font-bold">E. admin@lkcustoms.co.kr</p>
 
-        <p className="mt-4 hover:font-bold">02-552-2893</p>
+        <p className="mt-4 hover:font-bold">T. 02-552-2893</p>
 
         {/* <a href="mailto:admin@lkcustoms.co.kr" className="mt-4 hover:font-bold">
           admin@lkcustoms.co.kr
