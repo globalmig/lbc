@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 
 export default function Footer() {
+  
   return (
     <div className="py-10 bg-slate-800 text-white/60 text-center mx-auto">
       <Link href={"/"} className="flex justify-center font-bold pb-6 opacity-40">
