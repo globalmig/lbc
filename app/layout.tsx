@@ -86,9 +86,7 @@ export default function RootLayout({
           <Footer />
         </footer>
         {/* <!-- 공통 적용 스크립트 , 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 --> */}
-        <script type="text/javascript" src="//wsa.mig-log.com/wsalog.js">
-          
-        </script>
+        <script type="text/javascript" src="//wsa.mig-log.com/wsalog.js"></script>
         <script type="text/javascript">wsa.inflow("www.lkcustoms.co.kr"); wsa_do(wsa);</script>
 
         {/* ✅ 구조화 데이터 (JSON-LD) */}
@@ -97,7 +95,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
+              "@type": "ProfessionalService",
               name: "LK 관세사무소",
               url: "https://www.lkcustoms.co.kr",
               description: "수출입 통관, FTA 컨설팅, 관세환급, 식품검역 등 관세 전문 서비스 제공.",
@@ -105,9 +103,9 @@ export default function RootLayout({
                 "@type": "PostalAddress",
                 addressCountry: "KR",
                 addressLocality: "서울특별시",
-                addressRegion: "성동구",
+                addressRegion: "강남구",
               },
-              telephone: "02-XXXX-XXXX",
+              telephone: "02-552-2893",
             }),
           }}
         />
