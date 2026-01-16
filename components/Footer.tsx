@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import Script from "next/script";
 
 export default function Footer() {
   return (
@@ -17,19 +16,6 @@ export default function Footer() {
       <p className="text-sm">이메일: admin@lkcustoms.co.kr</p>
       <p className="mt-4 text-sm">© 2025 LK 관세사무소 INDUSTRY. All rights reserved.</p>
       <p className="text-sm">DESIGN & Development BY GLOBAL MIG</p>
-      {/* <!-- 공통 적용 스크립트 , 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 --> */}
-      <Script src="//wsa.mig-log.com/wsalog.js" strategy="beforeInteractive" />
-
-      <Script
-        id="wsa-init"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            wsa.inflow("www.lkcustoms.co.kr");
-            wsa_do(wsa);
-          `,
-        }}
-      />
     </div>
   );
 }
