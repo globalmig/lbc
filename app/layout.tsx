@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import GNB from "@/components/GNB";
+import Script from "next/script";
 
 // 폰트 세팅
 const geistSans = localFont({
@@ -84,10 +85,8 @@ export default function RootLayout({
         <main className="flex-1 min-h-screen">{children}</main>
         <footer className="mt-auto">
           <Footer />
+    
         </footer>
-        {/* <!-- 공통 적용 스크립트 , 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 --> */}
-        <script type="text/javascript" src="//wsa.mig-log.com/wsalog.js"></script>
-        <script type="text/javascript">wsa.inflow("www.lkcustoms.co.kr"); wsa_do(wsa);</script>
 
         {/* ✅ 구조화 데이터 (JSON-LD) */}
         <script
