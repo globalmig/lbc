@@ -9,12 +9,19 @@ export default function Footer() {
         <Image src={"/logo_white.png"} alt="LK관세사무소" width={140} height={40} className="hidden md:block" />
         <Image src={"/logo_white.png"} alt="LK관세사무소" width={80} height={40} className="md:hidden block" />
       </Link>
+      <div className="flex gap-4 justify-center">
+        <p className="text-sm">대표이사: 김환웅</p>
+        <p className="text-sm">사업자등록번호: 312-86-64385</p>
+        <p className="text-sm">천안본점: 충남 천안시 동남구 다가4길 4-11, 202</p>
+        <p className="text-sm">공장: 충남 천안시 서북구 2공단 2로 112, 1층</p>
+      </div>
+      <div className="flex gap-4 justify-center">
+        <p className="text-sm">전화: 1558-3705 / 041-592-9944</p>
+        <p className="text-sm">FAX: 041-592-9945</p>
 
-      <p className="text-sm">주소: 서울시 강남구 테헤란로 20길 18 부봉빌딩 6층, 608호</p>
-      <p className="text-sm">카톡 ID: lkcus</p>
-      <p className="text-sm">전화: 02-552-2893</p>
-      <p className="text-sm">이메일: admin@lkcustoms.co.kr</p>
-      <p className="mt-4 text-sm">© 2025 LK 관세사무소 INDUSTRY. All rights reserved.</p>
+        <p className="text-sm">이메일: bc3705@naver.com</p>
+      </div>
+      <p className="mt-4 text-sm">© 2026 (주)엘비씨 INDUSTRY. All rights reserved.</p>
       <p className="text-sm">DESIGN & Development BY GLOBAL MIG</p>
     </div>
   );
