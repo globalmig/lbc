@@ -28,27 +28,27 @@ export default function Slider() {
         className="mySwiper white-text w-full h-full"
       >
         <SwiperSlide className="relative">
-          <Image src="/img/bg_slider01.jpg" alt="Slide 1" fill priority sizes="100vw" quality={85} className="object-cover" />
-          <div className="bg-black/40 w-full h-full absolute"></div>
-          <div className="relative px-4 break-keep">
-            <h2>대표 관세사가 직접 수행·책임, LK 관세사무소 </h2>
+          <Image src="/img/bg_main.png" alt="Slide 1" fill priority sizes="100vw" quality={85} className="object-cover object-bottom" />
+          <div className="md:bg-black/0 bg-black/30 w-full h-full absolute"></div>
+          <div className="relative md:absolute md:left-32 md:top-40   md:text-start px-4 break-keep">
             <p>사업 규모가 아니라, 소수만 맡아 끝까지 책임집니다.</p>
+            <h2>친환경 비청 씨크린으로 해결하세요!</h2>
           </div>
         </SwiperSlide>
         <SwiperSlide className="relative">
-          <Image src="/img/bg_slider02.jpg" alt="Slide 3" fill priority sizes="100vw" quality={85} className="object-cover" />
-          <div className="bg-black/40 w-full h-full absolute"></div>
-          <div className="relative px-4 break-keep">
-            <h2>복잡한 통관 절차, 믿을 수 있는 전문가와 함께하세요.</h2>
-            <p>국제 무역의 든든한 파트너로서, 정확하고 신속한 통관 서비스를 제공합니다.</p>
+          <Image src="/img/bg_load.png" alt="Slide 1" fill priority sizes="100vw" quality={85} className="object-cover object-center" />
+          <div className="md:bg-black/0 bg-black/30 w-full h-full absolute"></div>
+          <div className="relative md:absolute md:left-32 md:top-40   md:text-start px-4 break-keep">
+            <p>꾸준한 연구와 뚝심있는 마음가짐</p>
+            <h2>친환경 비청 씨크린으로 해결하세요!</h2>
           </div>
         </SwiperSlide>
         <SwiperSlide className="relative">
-          <Image src="/img/bg_slider03.jpg" alt="Slide 3" fill priority sizes="100vw" quality={85} className="object-cover" />
-          <div className="bg-black/40 w-full h-full absolute"></div>
-          <div className="relative px-4 break-keep">
-            <h2>수출입 절차, 믿을 수 있는 전문가와 함께하세요.</h2>
-            <p>처음부터 끝까지 함께하는 관세 파트너로, 고객의 안심을 책임집니다.</p>
+          <Image src="/img/bg_children.png" alt="Slide 1" fill priority sizes="100vw" quality={85} className="object-cover object-center" />
+          <div className="md:bg-black/30 bg-black/30 w-full h-full absolute"></div>
+          <div className="relative md:absolute md:left-32 md:top-40   md:text-start px-4 break-keep">
+            <p>꾸준한 연구와 뚝심있는 마음가짐</p>
+            <h2>친환경 비청 씨크린으로 해결하세요!</h2>
           </div>
         </SwiperSlide>
       </Swiper>

@@ -24,8 +24,8 @@ export default function GNB() {
   return (
     <div className={`flex justify-between items-center absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1440px] h-16 white-text py-12 px-4 z-50 ${isSelected ? "bg-slate-800" : "bg-none"}`}>
       <Link href={"/"} className="text-3xl md:text-3xl font-bold mb-6 mt-2 md:mt-6">
-        <Image src={"/logo_white.png"} alt="LK관세사무소" width={140} height={40} className="hidden md:block" />
-        <Image src={"/logo_white.png"} alt="LK관세사무소" width={80} height={40} className="md:hidden block" />
+        <Image src={"/logo_white.png"} alt="LK관세사무소" width={280} height={40} className="hidden md:block" />
+        <Image src={"/logo_white.png"} alt="LK관세사무소" width={160} height={40} className="md:hidden block" />
       </Link>
       <ul className="md:flex hidden">
         <Link href={"/company"} className="px-6">

@@ -21,31 +21,31 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.lkcustoms.co.kr"), // 실제 도메인
   title: {
-    default: "LK 관세사무소 | 수출입 통관·FTA·관세환급 전문",
-    template: "%s | LK 관세사무소",
+    default: "엘비씨 | 녹조, 적조 해결",
+    template: "%s | 엘비씨",
   },
-  description: "LK 관세사무소는 수출입 통관, FTA 컨설팅, 관세환급, 식품검역 등 다양한 관세 관련 업무를 전문적으로 수행합니다.",
-  keywords: ["LK 관세사무소", "수입통관", "수출통관", "관세환급", "FTA 컨설팅", "식품검역", "수출입 대행", "세관 신고", "통관 전문"],
-  authors: [{ name: "LK 관세사무소", url: "https://www.lkcustoms.co.kr" }],
+  description: "엘비씨는 수출입 통관, FTA 컨설팅, 관세환급, 식품검역 등 다양한 관세 관련 업무를 전문적으로 수행합니다.",
+  keywords: ["엘비씨", "수입통관", "수출통관", "관세환급", "FTA 컨설팅", "식품검역", "수출입 대행", "세관 신고", "통관 전문"],
+  authors: [{ name: "엘비씨", url: "https://www.lkcustoms.co.kr" }],
   openGraph: {
     type: "website",
     url: "https://www.lkcustoms.co.kr",
-    title: "LK 관세사무소 | 수출입 통관·FTA·관세환급 전문",
+    title: "엘비씨 | 수출입 통관·FTA·관세환급 전문",
     description: "수출입 통관, FTA 협정, 관세환급, 식품검역 등 전문 서비스를 제공합니다.",
-    siteName: "LK 관세사무소",
+    siteName: "엘비씨",
     images: [
       {
         url: "https://www.lkcustoms.co.kr/img/SEO.png", // og 이미지 (public 폴더에)
         width: 1200,
         height: 630,
-        alt: "LK 관세사무소 대표 이미지",
+        alt: "엘비씨 대표 이미지",
       },
     ],
     locale: "ko_KR",
   },
   twitter: {
     card: "summary_large_image",
-    title: "LK 관세사무소 | 수출입 통관·FTA·관세환급 전문",
+    title: "엘비씨 | 수출입 통관·FTA·관세환급 전문",
     description: "수출입 통관 및 FTA 컨설팅 전문, 관세 환급과 식품검역까지 한 번에.",
     images: ["https://www.lkcustoms.co.kr/img/SEO.png"],
   },
@@ -86,18 +86,6 @@ export default function RootLayout({
         <footer className="mt-auto">
           <Footer />
           {/* <!-- 공통 적용 스크립트 , 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 --> */}
-          <Script
-            src="//wsa.mig-log.com/wsalog.js"
-            strategy="afterInteractive"
-            onLoad={() => {
-              // @ts-ignore
-              window.wsa = window.wsa || {};
-              // @ts-ignore
-              window.wsa.inflow("www.lkcustoms.co.kr");
-              // @ts-ignore
-              window.wsa_do(window.wsa);
-            }}
-          />
         </footer>
 
         {/* ✅ 구조화 데이터 (JSON-LD) */}
@@ -107,7 +95,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
-              name: "LK 관세사무소",
+              name: "엘비씨",
               url: "https://www.lkcustoms.co.kr",
               description: "수출입 통관, FTA 컨설팅, 관세환급, 식품검역 등 관세 전문 서비스 제공.",
               address: {
