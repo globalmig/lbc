@@ -1,91 +1,130 @@
-"use client";
+﻿"use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
+type NavItem = {
+  href: string;
+  label: string;
+  external?: boolean;
+};
+
+const navItems: NavItem[] = [
+  { href: "/company", label: "회사소개" },
+  { href: "/work", label: "업무분야" },
+  { href: "/shop", label: "상품소개" },
+  { href: "/board", label: "공지사항" },
+  { href: "/library", label: "자료실" },
+  { href: "https://elim0691.cafe24.com/index.html", label: "쇼핑몰", external: true },
+];
+
 export default function GNB() {
-  const [isSelected, setIsSelected] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const isShopDetail = Boolean(pathname && pathname.startsWith("/shop/"));
-  const toggleMenu = () => {
-    setIsSelected(!isSelected);
-  };
+
+  const closeMenu = () => setIsMenuOpen(false);
+
+  useEffect(() => {
+    closeMenu();
+  }, [pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768 && isSelected) {
-        setIsSelected(false);
+      if (window.innerWidth >= 768 && isMenuOpen) {
+        closeMenu();
       }
     };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [isSelected]);
 
-  const containerBgClass = isSelected ? "bg-slate-800" : isShopDetail ? "bg-black/50 backdrop-blur-sm" : "bg-none";
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [isMenuOpen]);
+
+  const containerBgClass = isMenuOpen ? "bg-slate-900/95 backdrop-blur" : isShopDetail ? "bg-black/50 backdrop-blur-sm" : "bg-transparent";
 
   return (
-    <div className={`absolute top-0 left-0 w-full z-50 ${containerBgClass}`}>
-      <div className="relative left-1/2 flex h-16 w-full max-w-[1440px] -translate-x-1/2 items-center justify-between px-4 py-12 white-text">
-        <Link href={"/"} className="text-3xl md:text-3xl font-bold mb-6 mt-2 md:mt-6">
-          <Image src={"/logo_white.png"} alt="LK관세사무소" width={280} height={40} className="hidden md:block" />
-          <Image src={"/logo_white.png"} alt="LK관세사무소" width={160} height={40} className="md:hidden block" />
+    <header className={`fixed md:absolute top-0 left-0 z-50 w-full ${containerBgClass}`}>
+      <div className="relative left-1/2 flex h-16 w-full max-w-[1440px] -translate-x-1/2 items-center justify-between px-4 md:h-20 md:px-8 white-text">
+        <Link href="/" className="block">
+          <Image src="/logo_white.png" alt="LK관세사무소" width={280} height={40} className="hidden md:block" priority />
+          <Image src="/logo_white.png" alt="LK관세사무소" width={150} height={36} className="block md:hidden" priority />
         </Link>
-        <ul className="md:flex hidden">
-          <Link href={"/company"} className="px-6">
-            회사소개
-          </Link>
-          <Link href={"/work"} className="px-6">
-            업무분야
-          </Link>
-          <Link href={"/shop"} className="px-6">
-            상품소개
-          </Link>
-          <Link href={"/board"} className="px-6">
-            공지사항
-          </Link>
-          <Link href={"/library"} className="px-6">
-            자료실
-          </Link>
-          <a href={"https://elim0691.cafe24.com/index.html"} target="_blank" className="px-6">
-            쇼핑몰
-          </a>
-        </ul>
-        <div className="flex md:hidden">
-          <button className="flex flex-col gap-1 white-text" onClick={toggleMenu} aria-label="Toggle Menu">
-            <span className="block w-6 h-0.5 bg-white"></span>
-            <span className="block w-6 h-0.5 bg-white"></span>
-            <span className="block w-6 h-0.5 bg-white"></span>
+
+        <nav aria-label="Global navigation">
+          <ul className="hidden items-center md:flex">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                {item.external ? (
+                  <a href={item.href} target="_blank" rel="noreferrer" className="px-5 py-2">
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link href={item.href} className="px-5 py-2">
+                    {item.label}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          <button
+            type="button"
+            className="relative z-[60] flex h-10 w-10 items-center justify-center md:hidden"
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+          >
+            <span className="sr-only">Menu</span>
+            <span
+              className={`absolute block h-0.5 w-6 bg-white transition-transform duration-200 ${isMenuOpen ? "rotate-45" : "-translate-y-2"}`}
+            />
+            <span className={`absolute block h-0.5 w-6 bg-white transition-opacity duration-200 ${isMenuOpen ? "opacity-0" : "opacity-100"}`} />
+            <span
+              className={`absolute block h-0.5 w-6 bg-white transition-transform duration-200 ${isMenuOpen ? "-rotate-45" : "translate-y-2"}`}
+            />
           </button>
-          {isSelected && (
-            <>
-              <div className="bg-black/50 w-full h-full"></div>
-              <ul className="flex flex-col absolute top-16 right-0 bg-slate-800 white-text w-full text-center border-rounded-b-md">
-                <Link href={"/company"} className="px-6">
-                  회사소개
-                </Link>
-                <Link href={"/work"} className="px-6">
-                  업무분야
-                </Link>
-                <Link href={"/shop"} className="px-6">
-                  상품소개
-                </Link>
-                <Link href={"/board"} className="px-6">
-                  공지사항
-                </Link>
-                <Link href={"/library"} className="px-6">
-                  자료실
-                </Link>
-                <a href={"https://elim0691.cafe24.com/index.html"} target="_blank" className="px-6">
-                  쇼핑몰
-                </a>
-              </ul>
-            </>
-          )}
-        </div>
+
+          <div
+            className={`fixed inset-0 top-16 z-40 md:hidden ${isMenuOpen ? "pointer-events-auto" : "pointer-events-none"}`}
+            aria-hidden={!isMenuOpen}
+          >
+            <button
+              type="button"
+              className={`absolute inset-0 bg-black/50 transition-opacity duration-200 ${isMenuOpen ? "opacity-100" : "opacity-0"}`}
+              onClick={closeMenu}
+              aria-label="Close mobile menu backdrop"
+            />
+            <ul
+              id="mobile-menu"
+              className={`absolute right-0 top-0 flex max-h-[calc(100vh-4rem)] w-full flex-col overflow-y-auto bg-slate-900 px-6 pb-8 pt-6 text-center text-lg transition-all duration-200 ${isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"}`}
+            >
+              {navItems.map((item) => (
+                <li key={`mobile-${item.href}`} className="border-b border-white/10 last:border-b-0">
+                  {item.external ? (
+                    <a href={item.href} target="_blank" rel="noreferrer" className="block py-4" onClick={closeMenu}>
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link href={item.href} className="block py-4" onClick={closeMenu}>
+                      {item.label}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
       </div>
-    </div>
+    </header>
   );
 }
+
