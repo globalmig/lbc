@@ -1,9 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import GNB from "@/components/GNB";
-import Script from "next/script";
 
 // 폰트 세팅
 const geistSans = localFont({
@@ -19,23 +18,23 @@ const geistMono = localFont({
 
 // ✅ SEO 메타데이터
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.lkcustoms.co.kr"), // 실제 도메인
+  metadataBase: new URL("https://lbc-eight.vercel.app"), // 배포 호스팅 주소
   title: {
-    default: "엘비씨 | 녹조, 적조 해결",
+    default: "엘비씨 | 친환경 수질개선·복합 규산염 솔루션",
     template: "%s | 엘비씨",
   },
-  description: "엘비씨는 수출입 통관, FTA 컨설팅, 관세환급, 식품검역 등 다양한 관세 관련 업무를 전문적으로 수행합니다.",
-  keywords: ["엘비씨", "수입통관", "수출통관", "관세환급", "FTA 컨설팅", "식품검역", "수출입 대행", "세관 신고", "통관 전문"],
-  authors: [{ name: "엘비씨", url: "https://www.lkcustoms.co.kr" }],
+  description: "엘비씨는 수용성 복합 규산염 기술을 기반으로 녹조·적조 저감, 수질 정화, 토양·농축수산 환경 개선 솔루션을 연구·제공합니다.",
+  keywords: ["엘비씨", "LBC", "비청 씨크린", "수용성 복합 규산염", "수처리제", "수질 정화", "녹조 제거", "적조 방제", "친환경 미네랄", "환경 복원"],
+  authors: [{ name: "(주)엘비씨", url: "https://lbc-eight.vercel.app" }],
   openGraph: {
     type: "website",
-    url: "https://www.lkcustoms.co.kr",
-    title: "엘비씨 | 수출입 통관·FTA·관세환급 전문",
-    description: "수출입 통관, FTA 협정, 관세환급, 식품검역 등 전문 서비스를 제공합니다.",
-    siteName: "엘비씨",
+    url: "https://lbc-eight.vercel.app",
+    title: "엘비씨 | 친환경 수질개선·복합 규산염 솔루션",
+    description: "수용성 복합 규산염 기반의 수질 정화, 녹조·적조 저감, 토양·농축수산 환경 개선 솔루션을 제공합니다.",
+    siteName: "(주)엘비씨",
     images: [
       {
-        url: "https://www.lkcustoms.co.kr/img/SEO.png", // og 이미지 (public 폴더에)
+        url: "https://lbc-eight.vercel.app/img/SEO.png", // og 이미지 (public 폴더에)
         width: 1200,
         height: 630,
         alt: "엘비씨 대표 이미지",
@@ -45,12 +44,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "엘비씨 | 수출입 통관·FTA·관세환급 전문",
-    description: "수출입 통관 및 FTA 컨설팅 전문, 관세 환급과 식품검역까지 한 번에.",
-    images: ["https://www.lkcustoms.co.kr/img/SEO.png"],
+    title: "엘비씨 | 친환경 수질개선·복합 규산염 솔루션",
+    description: "수질 정화와 녹조·적조 저감을 위한 수용성 복합 규산염 기반 솔루션을 연구·제공합니다.",
+    images: ["https://lbc-eight.vercel.app/img/SEO.png"],
   },
   alternates: {
-    canonical: "https://www.lkcustoms.co.kr",
+    canonical: "https://lbc-eight.vercel.app",
   },
   robots: {
     index: true,
@@ -68,7 +67,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   other: {
-    "naver-site-verification": "ac9ff0ce060a869f0f1826783d8ee5567fe32814",
+    // "naver-site-verification": "ac9ff0ce060a869f0f1826783d8ee5567fe32814",
   },
 };
 
@@ -94,17 +93,21 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "ProfessionalService",
-              name: "엘비씨",
-              url: "https://www.lkcustoms.co.kr",
-              description: "수출입 통관, FTA 컨설팅, 관세환급, 식품검역 등 관세 전문 서비스 제공.",
+              "@type": "Organization",
+              name: "(주)엘비씨",
+              url: "https://lbc-eight.vercel.app",
+              description: "수용성 복합 규산염 기술 기반의 수질 정화 및 친환경 솔루션 기업",
+              logo: "https://lbc-eight.vercel.app/logo_white.png",
               address: {
                 "@type": "PostalAddress",
+                streetAddress: "다가4길 4-11, 202",
+                addressLocality: "천안시 동남구",
+                addressRegion: "충청남도",
                 addressCountry: "KR",
-                addressLocality: "서울특별시",
-                addressRegion: "강남구",
               },
-              telephone: "02-552-2893",
+              telephone: "1558-3705",
+              email: "bc3705@naver.com",
+              sameAs: ["https://blog.naver.com/lek9740"],
             }),
           }}
         />
