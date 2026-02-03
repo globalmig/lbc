@@ -26,7 +26,7 @@ export default function EditPage({ params }: { params: { id: string } }) {
       try {
         setLoading(true);
         const data = await postAPI.getDetail(id);
-        console.log("✅ 수정할 게시글 로드:", data);
+        // console.log("✅ 수정할 게시글 로드:", data);
 
         setFormData({
           title: data.title,
@@ -146,7 +146,17 @@ export default function EditPage({ params }: { params: { id: string } }) {
             <label htmlFor="contact" className="font-semibold">
               연락처
             </label>
-            <input id="contact" name="contact" className="w-full border border-slate-400 rounded px-3 py-2 " placeholder="문의 답변 받으실 연락처를 입력하세요" required />
+            <input
+              type="text"
+              id="contact"
+              name="contact"
+              value={formData.contact}
+              onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
+              className="w-full border border-slate-400 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-slate-500"
+              placeholder="문의 답변 받으실 연락처를 입력하세요"
+              disabled={submitting}
+              required
+            />
           </div>
 
           <div className="flex flex-col gap-2">

@@ -9,7 +9,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
 
   try {
     const { data, error } = await supabase
-      .from("posts")
+      .from("posts_lbk")
       .select("id, title, created_at") // 제목과 날짜만
       .eq("id", id)
       .single();
@@ -98,7 +98,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
 
     const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
-    const { data: post, error } = await supabase.from("posts").select("id, title, content, contact,created_at, updated_at, views, password_hash").eq("id", id).single();
+    const { data: post, error } = await supabase.from("posts_lbk").select("id, title, content, contact,created_at, updated_at, views, password_hash").eq("id", id).single();
 
     if (error || !post) {
       return NextResponse.json({ error: "게시글을 찾을 수 없습니다." }, { status: 404 });
@@ -143,7 +143,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
     const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
     // 1) 비밀번호 해시 가져오기
-    const { data: post, error } = await supabase.from("posts").select("id, password_hash").eq("id", id).single();
+    const { data: post, error } = await supabase.from("posts_lbk").select("id, password_hash").eq("id", id).single();
 
     if (error || !post) {
       return NextResponse.json({ error: "게시글을 찾을 수 없습니다." }, { status: 404 });
@@ -164,7 +164,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
 
     // 3) 실제 수정
     const { data: updated, error: updateError } = await supabase
-      .from("posts")
+      .from("posts_lbk")
       .update({
         title,
         content,
@@ -202,7 +202,7 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
     const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
     // 1) 비밀번호 해시 가져오기
-    const { data: post, error } = await supabase.from("posts").select("id, password_hash").eq("id", id).single();
+    const { data: post, error } = await supabase.from("posts_lbk").select("id, password_hash").eq("id", id).single();
 
     if (error || !post) {
       return NextResponse.json({ error: "게시글을 찾을 수 없습니다." }, { status: 404 });
@@ -222,7 +222,7 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
     }
 
     // 3) 삭제
-    const { error: deleteError } = await supabase.from("posts").delete().eq("id", id);
+    const { error: deleteError } = await supabase.from("posts_lbk").delete().eq("id", id);
 
     if (deleteError) {
       console.error("게시글 삭제 오류:", deleteError);

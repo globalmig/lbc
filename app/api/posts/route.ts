@@ -11,11 +11,11 @@ export async function GET(request: NextRequest) {
 
   try {
     // 전체 개수 조회
-    const { count } = await supabase.from("posts").select("*", { count: "exact", head: true });
+    const { count } = await supabase.from("posts_lbk").select("*", { count: "exact", head: true });
 
     // 게시글 목록 조회 (비밀번호 제외)
     const { data, error } = await supabase
-      .from("posts")
+      .from("posts_lbk")
       .select("id, title, content, contact,  created_at, updated_at, views")
       .order("created_at", { ascending: false })
       .range(offset, offset + limit - 1);
@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
     const passwordHash = await bcrypt.hash(password, 10);
 
     const { data, error } = await supabase
-      .from("posts")
+      .from("posts_lbk")
       .insert([
         {
           title,

@@ -7,7 +7,7 @@ import Image from "next/image";
 import React, { useEffect, useState, useCallback } from "react";
 import { useRouter, usePathname } from "next/navigation";
 
-type WorkType = "rnd" | "environment" | "agri" | "food" | "esg";
+type WorkType = "rnd" | "environment" | "agri" | "water" | "esg";
 
 export default function WorkPage() {
   const router = useRouter();
@@ -21,7 +21,7 @@ export default function WorkPage() {
 
     const params = new URLSearchParams(window.location.search);
     const typeParam = params.get("type") as WorkType | null;
-    const allowed: WorkType[] = ["rnd", "environment", "agri", "food", "esg"];
+    const allowed: WorkType[] = ["rnd", "environment", "water", "agri", "esg"];
 
     if (typeParam && allowed.includes(typeParam)) {
       setType(typeParam);
@@ -48,7 +48,7 @@ export default function WorkPage() {
   return (
     <>
       <section>
-        <Hero title={"사업분야"} subtitle={"LBC의 주요 사업분야를 소개합니다."} img={"/img/bg_work_solutions.jpg"} priority />
+        <Hero title={"사업분야"} subtitle={"LBC의 주요 사업분야를 소개합니다."} img={"/img/bg_children.png"} priority />
       </section>
 
       {/* ✅ 탭 버튼 */}
@@ -59,12 +59,15 @@ export default function WorkPage() {
         <button className={btnClass(isType === "environment")} aria-pressed={isType === "environment"} onClick={() => SelectType("environment")}>
           환경 개선 솔루션
         </button>
+        <button className={btnClass(isType === "water")} aria-pressed={isType === "water"} onClick={() => SelectType("water")}>
+          수질 정화·환경 복원
+        </button>
         <button className={btnClass(isType === "agri")} aria-pressed={isType === "agri"} onClick={() => SelectType("agri")}>
           농·축·수산 기능성 소재
         </button>
-        <button className={btnClass(isType === "food")} aria-pressed={isType === "food"} onClick={() => SelectType("food")}>
+        {/* <button className={btnClass(isType === "food")} aria-pressed={isType === "food"} onClick={() => SelectType("food")}>
           식품 안전·품질 개선
-        </button>
+        </button> */}
         <button className={btnClass(isType === "esg")} aria-pressed={isType === "esg"} onClick={() => SelectType("esg")}>
           ESG·친환경 미래사업
         </button>
@@ -78,7 +81,7 @@ export default function WorkPage() {
             title="친환경 광물소재 R&D"
             description={`수용성 운모(MICA) 기반의 친환경 광물소재를 연구·개발합니다.
 불순물 제거 및 기능 극대화를 위한 특수 공정과 원천기술로, 기존 광물소재의 한계를 넘어서는 솔루션을 제공합니다.`}
-            imgSrc="/img/bg_slider02.jpg" // 원하시는 이미지로 교체하세요
+            imgSrc="/img/bg_work_search.jpg" // 원하시는 이미지로 교체하세요
           />
 
           <div className="px-4">
@@ -104,7 +107,7 @@ export default function WorkPage() {
             title="환경 개선 솔루션"
             description={`천연 미네랄 기반으로 토양 개량 및 환경 개선을 지원합니다.
 잔류농약·중금속·유해오염물질 등 다양한 환경 이슈에 대응 가능한 복원 솔루션을 제공합니다.`}
-            imgSrc="/img/bg_work_solutions.jpg" // 원하시는 이미지로 교체
+            imgSrc="/img/Farm.png" // 원하시는 이미지로 교체
           />
 
           <div className="px-4">
@@ -122,6 +125,34 @@ export default function WorkPage() {
         </section>
       )}
 
+      {/* 수질*/}
+      {isType === "water" && (
+        <section className="pt-10 mb-32 max-w-[1440px] mx-auto flex flex-col gap-20">
+          <Figure01
+            direction="left"
+            title="수질 정화·환경 복원"
+            description={`오염된 수질과 환경을 회복하는 천연 미네랄 기반 정화 기술을 개발합니다.`}
+            imgSrc="/img/water.png" // 원하시는 이미지로 교체
+          />
+
+          <div className="px-4">
+            <div className="border-l-8 border-sky-700 my-0 md:my-20 pl-8">
+              <h2>적용 분야</h2>
+              <p className="text-black/50">Applications</p>
+            </div>
+
+            <ul className="border-2 p-10 md:px-24 my-10 rounded-xl list-disc leading-loose gap-6 flex flex-col break-keep">
+              <li>하천·호소(저수지/호수) 수질 개선</li>
+              <li>농업용수/관개수 정화 및 관리</li>
+              <li>양식장(수산) 수질 안정화(탁도·유기물 관리 관점)</li>
+              <li>사업장 배출수 전처리(현장 조건 맞춤 적용)</li>
+              <li>탁도 및 부유물 저감, 침전/여과 효율 개선 보조</li>
+              <li>유기물/악취 원인 저감 및 수질 안정화 지원</li>
+            </ul>
+          </div>
+        </section>
+      )}
+
       {/* 3) 농·축·수산 기능성 소재 */}
       {isType === "agri" && (
         <section className="pt-10 mb-32 max-w-[1440px] mx-auto flex flex-col gap-20">
@@ -130,7 +161,7 @@ export default function WorkPage() {
             title="농·축·수산 기능성 소재"
             description={`작물·가축·어류의 영양 공급과 성장 촉진을 위한 기능성 미네랄 소재를 제공합니다.
 병충해·세균 침입 예방 등 현장 문제를 줄이도록 돕습니다.`}
-            imgSrc="/img/bg_import.jpg" // 원하시는 이미지로 교체
+            imgSrc="/img/grow.png" // 원하시는 이미지로 교체
           />
 
           <div className="px-4">
@@ -149,7 +180,7 @@ export default function WorkPage() {
       )}
 
       {/* 4) 식품 안전·품질 개선 */}
-      {isType === "food" && (
+      {/* {isType === "food" && (
         <section className="pt-10 mb-32 max-w-[1440px] mx-auto flex flex-col gap-20">
           <Figure01
             direction="left"
@@ -172,7 +203,7 @@ export default function WorkPage() {
             </ul>
           </div>
         </section>
-      )}
+      )} */}
 
       {/* 5) ESG·친환경 미래사업 */}
       {isType === "esg" && (
@@ -182,7 +213,7 @@ export default function WorkPage() {
             title="ESG·친환경 미래사업"
             description={`친환경 소재·기술을 기반으로 지속가능한 미래를 만듭니다.
 환경 규제 및 글로벌 친환경 트렌드에 대응할 수 있는 사업 확장과 협업을 추진합니다.`}
-            imgSrc="/img/bg_taxes.jpg" // 원하시는 이미지로 교체
+            imgSrc="/img/food.png" // 원하시는 이미지로 교체
           />
 
           <div className="px-4">

@@ -54,7 +54,7 @@ export default function ContactSection() {
 
           {/* 정보 노출 영역 */}
           <div className="mt-4 min-h-[40px]">
-            {open === "kakao" && <p className="text-lg font-semibold animate-fade-slide text-sky-500">카톡 ID: lkcus</p>}
+            {/* {open === "kakao" && <p className="text-lg font-semibold animate-fade-slide text-sky-500">카톡 ID: lkcus</p>} */}
             {open === "email" && (
               <a href="bc3705@naver.com" className="text-lg font-semibold underline text-sky-500 hover:text-sky-300 animate-fade-slide">
                 bc3705@naver.com

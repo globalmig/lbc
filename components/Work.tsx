@@ -7,31 +7,31 @@ const workItems = [
     title: "천연 미네랄 신소재 개발",
     imgSrc: "/img/bg_work_search.jpg",
     description: "수용성 운모(MICA) 규산 기반의 친환경 복합 미네랄 신소재를 연구·개발합니다.",
-    link: "/work?type=export",
+    link: "/work?type=rnd",
   },
   {
     title: "환경 개선·토양 개량 솔루션",
     imgSrc: "/img/Farm.png",
     description: "토양 개선, 잔류 농약 및 중금속 저감을 위한 친환경 농업 솔루션을 제공합니다.",
-    link: "/work?type=import",
+    link: "/work?type=environment",
   },
   {
     title: "수질 정화·환경 복원",
     imgSrc: "/img/water.png",
     description: "오염된 수질과 환경을 회복하는 천연 미네랄 기반 정화 기술을 개발합니다.",
-    link: "/work?type=fta",
+    link: "/work?type=water",
   },
   {
     title: "농·축·수산 생육 개선",
     imgSrc: "/img/grow.png",
     description: "작물·가축·어류의 성장 촉진과 품질 향상을 위한 기능성 미네랄 응용 제품입니다.",
-    link: "/work?type=drawback",
+    link: "/work?type=agri",
   },
   {
     title: "친환경 바이오 응용 기술",
     imgSrc: "/img/food.png",
     description: "식물·생물 생육 개선 및 지속 가능한 바이오 환경을 위한 응용 기술을 연구합니다.",
-    link: "/work?type=inspection",
+    link: "/work?type=esg",
   },
 ];
 

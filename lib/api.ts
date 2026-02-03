@@ -18,7 +18,7 @@ api.interceptors.request.use(
   (error) => {
     console.error("❌ 요청 인터셉터 에러:", error);
     return Promise.reject(error);
-  }
+  },
 );
 
 // 응답 인터셉터
@@ -35,7 +35,7 @@ api.interceptors.response.use(
       data: error.response?.data,
     });
     return Promise.reject(error);
-  }
+  },
 );
 
 // 타입 정의
@@ -86,28 +86,28 @@ export const postAPI = {
 
   // 게시글 상세 조회
   getDetail: async (id: string): Promise<Post> => {
-    console.log("📌 getDetail 호출, ID:", id);
+    // console.log("📌 getDetail 호출, ID:", id);
     const response = await api.get<Post>(`/posts/${id}`);
     return response.data;
   },
 
   // 게시글 생성
   create: async (data: CreatePostRequest): Promise<Post> => {
-    console.log("📌 create 호출:", data);
+    // console.log("📌 create 호출:", data);
     const response = await api.post<Post>("/posts", data);
     return response.data;
   },
 
   // 게시글 수정
   update: async (id: string, data: UpdatePostRequest): Promise<Post> => {
-    console.log("📌 update 호출, ID:", id, "Data:", data);
+    // console.log("📌 update 호출, ID:", id, "Data:", data);
     const response = await api.put<Post>(`/posts/${id}`, data);
     return response.data;
   },
 
   // 게시글 삭제
   delete: async (id: string, data: DeletePostRequest): Promise<{ message: string }> => {
-    console.log("📌 delete 호출, ID:", id, "Data:", data);
+    // console.log("📌 delete 호출, ID:", id, "Data:", data);
     const response = await api.delete<{ message: string }>(`/posts/${id}`, {
       data, // DELETE 요청의 body는 data 옵션으로 전달
     });

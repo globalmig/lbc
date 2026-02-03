@@ -1,2 +1,15 @@
 {
+  // 기본 파일 인코딩을 UTF-8 BOM으로 설정
+  "files.encoding": "utf8bom",
+  "files.autoGuessEncoding": true,
+
+  // 저장할 때마다 .cs 파일을 UTF-8 BOM으로 다시 저장
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": ".*\\.cs$",
+        "cmd": "powershell -NoProfile -Command \"(Get-Content -Raw -Encoding UTF8 '%file%') | Set-Content -Encoding utf8BOM '%file%'\""
+      }
+    ]
+  }
 }
