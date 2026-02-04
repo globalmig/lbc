@@ -39,7 +39,7 @@ export default function Figure02(item: Figure01Props) {
               <p className="p-0 m-0">- 이전가격심사 전문관세사</p>
             </ul>
           ) : (
-            <pre className="whitespace-pre-wrap break-words text-start  break-keepleading-relaxed text-lg">{item.description}</pre>
+            <p className="whitespace-pre-wrap break-words text-start  break-keepleading-relaxed text-lg">{item.description}</p>
           )}
         </div>
       </div>

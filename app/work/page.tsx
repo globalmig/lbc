@@ -48,7 +48,7 @@ export default function WorkPage() {
   return (
     <>
       <section>
-        <Hero title={"사업분야"} subtitle={"LBC의 주요 사업분야를 소개합니다."} img={"/img/bg_children.png"} priority />
+        <Hero title={"업무분야"} subtitle={"LBC의 주요 업무분야를 소개합니다."} img={"/img/bg_children.png"} priority />
       </section>
 
       {/* ✅ 탭 버튼 */}

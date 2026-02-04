@@ -32,7 +32,7 @@ export default function Slider() {
           <div className="md:bg-black/0 bg-black/30 w-full h-full absolute"></div>
           <div className="relative md:absolute md:left-32 md:top-40   md:text-start px-4 break-keep">
             <p>사업 규모가 아니라, 소수만 맡아 끝까지 책임집니다.</p>
-            <h2>친환경 비청 씨크린으로 해결하세요!</h2>
+            <h2>계속해서 품질을 위하여 노력하는 회사가 되겠습니다.</h2>
           </div>
         </SwiperSlide>
         <SwiperSlide className="relative">
@@ -40,7 +40,7 @@ export default function Slider() {
           <div className="md:bg-black/0 bg-black/30 w-full h-full absolute"></div>
           <div className="relative md:absolute md:left-32 md:top-40   md:text-start px-4 break-keep">
             <p>꾸준한 연구와 뚝심있는 마음가짐</p>
-            <h2>친환경 비청 씨크린으로 해결하세요!</h2>
+            <h2>계속해서 품질을 위하여 노력하는 회사가 되겠습니다.</h2>
           </div>
         </SwiperSlide>
         <SwiperSlide className="relative">
@@ -48,7 +48,7 @@ export default function Slider() {
           <div className="md:bg-black/30 bg-black/30 w-full h-full absolute"></div>
           <div className="relative md:absolute md:left-32 md:top-40   md:text-start px-4 break-keep">
             <p>꾸준한 연구와 뚝심있는 마음가짐</p>
-            <h2>친환경 비청 씨크린으로 해결하세요!</h2>
+            <h2>계속해서 품질을 위하여 노력하는 회사가 되겠습니다.</h2>
           </div>
         </SwiperSlide>
       </Swiper>

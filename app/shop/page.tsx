@@ -6,11 +6,13 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { products } from "./products";
 
-type ShopTab = "all" | "water" | "other";
+type ShopTab = "all" | "water" | "agri" | "other";
 
 const WATER_TREATMENT_CATEGORIES = new Set(["수처리제"]);
+const AGRI_SUPPLY_CATEGORIES = new Set(["농자제"]);
 
 function getCategoryBucket(category: string) {
+  if (AGRI_SUPPLY_CATEGORIES.has(category)) return "농자제";
   return WATER_TREATMENT_CATEGORIES.has(category) ? "수처리제" : "기타 제품";
 }
 
@@ -24,7 +26,7 @@ export default function page() {
 
     const params = new URLSearchParams(window.location.search);
     const typeParam = params.get("type") as ShopTab | null;
-    const allowed: ShopTab[] = ["all", "water", "other"];
+    const allowed: ShopTab[] = ["all", "water", "agri", "other"];
 
     if (typeParam && allowed.includes(typeParam)) {
       setActiveTab(typeParam);
@@ -52,15 +54,16 @@ export default function page() {
           acc[bucket].push(product);
           return acc;
         },
-        { 수처리제: [] as typeof products, "기타 제품": [] as typeof products },
+        { 수처리제: [] as typeof products, 농자제: [] as typeof products, "기타 제품": [] as typeof products },
       ),
     [],
   );
 
   const visibleGroups = useMemo(() => {
     if (activeTab === "water") return ["수처리제"] as const;
+    if (activeTab === "agri") return ["농자제"] as const;
     if (activeTab === "other") return ["기타 제품"] as const;
-    return ["수처리제", "기타 제품"] as const;
+    return ["농자제", "수처리제", "기타 제품"] as const;
   }, [activeTab]);
 
   const btnBase = "border-[1.2px] border-gray-300 shadow-md rounded-xl py-4 md:py-5 transition break-keep";
@@ -99,13 +102,17 @@ export default function page() {
           </div> */}
         </div>
 
-        <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-[1440px] mb-10">
+        <div className="grid grid-cols-4 gap-3 md:gap-4 max-w-[1440px] mb-10">
           <button className={btnClass(activeTab === "all")} aria-pressed={activeTab === "all"} onClick={() => selectTab("all")}>
             전체
+          </button>
+          <button className={btnClass(activeTab === "agri")} aria-pressed={activeTab === "agri"} onClick={() => selectTab("agri")}>
+            농자제
           </button>
           <button className={btnClass(activeTab === "water")} aria-pressed={activeTab === "water"} onClick={() => selectTab("water")}>
             수처리제
           </button>
+
           <button className={btnClass(activeTab === "other")} aria-pressed={activeTab === "other"} onClick={() => selectTab("other")}>
             기타 제품
           </button>

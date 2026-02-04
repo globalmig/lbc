@@ -21,7 +21,7 @@ export default function Figure01(item: Figure01Props) {
 
         <figcaption className={`text-sm w-full md:w-[40%] ${item.direction === "left" ? "text-start" : "text-end"} mt-2 text-gray-600`}>
           <h3>{item.title}</h3>
-          <pre className="whitespace-pre-wrap break-words leading-relaxed text-lg">{item.description}</pre>
+          <p className="whitespace-pre-wrap break-words leading-relaxed text-lg">{item.description}</p>
         </figcaption>
       </figure>
     </div>

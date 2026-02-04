@@ -17,7 +17,16 @@ export const notices: Notice[] = [
     id: "k-water-demo-20191007",
     title: "한국수자원공사 주최 녹조제거기술 현장시연회에 (주)엘비씨 참여",
     createdAt: "2019-10-07",
-    images: ["/img/board/20191007_01.png"],
+    images: [
+      "/img/board/20191007_01.png",
+      "/img/board/20191007_02.png",
+      "/img/board/20191007_03.png",
+      "/img/board/20191007_04.png",
+      "/img/board/20191007_05.png",
+      "/img/board/20191007_06.png",
+      "/img/board/20191007_07.png",
+      "/img/board/20191007_08.png",
+    ],
   },
   {
     id: "soluble-silicate-feed-additive-20191004",

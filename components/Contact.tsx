@@ -47,9 +47,9 @@ export default function ContactSection() {
               <Phone className="w-6 h-6" />
             </button>
 
-            <button onClick={() => toggle("phone2")} className={`p-3 rounded-full bg-white/10 hover:bg-white/20 transition ${open === "phone" ? "bg-white/30" : ""}`} aria-label="전화번호">
+            {/* <button onClick={() => toggle("phone2")} className={`p-3 rounded-full bg-white/10 hover:bg-white/20 transition ${open === "phone" ? "bg-white/30" : ""}`} aria-label="전화번호">
               <Phone className="w-6 h-6" />
-            </button>
+            </button> */}
           </div>
 
           {/* 정보 노출 영역 */}
@@ -57,7 +57,7 @@ export default function ContactSection() {
             {/* {open === "kakao" && <p className="text-lg font-semibold animate-fade-slide text-sky-500">카톡 ID: lkcus</p>} */}
             {open === "email" && (
               <a href="bc3705@naver.com" className="text-lg font-semibold underline text-sky-500 hover:text-sky-300 animate-fade-slide">
-                bc3705@naver.com
+                lbclbc3705@naver.com
               </a>
             )}
             {open === "phone" && (
@@ -65,11 +65,11 @@ export default function ContactSection() {
                 1558-3705
               </a>
             )}
-            {open === "phone2" && (
+            {/* {open === "phone2" && (
               <a href="tel:041-592-9944" className="text-lg font-semibold text-sky-500 hover:text-sky-300 animate-fade-slide">
                 041-592-9944
               </a>
-            )}
+            )} */}
           </div>
         </div>
 
