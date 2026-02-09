@@ -69,7 +69,7 @@ export default function page({ params }: PageProps) {
             <div className="mt-4  gap-4">
               {product.detailImages.map((image, index) => (
                 <div key={`${product.slug}-detail-${index}`} className="">
-                  <Image src={image} alt={`${product.name} 상세 이미지 ${index + 1}`} width={1000} height={1000} className="w-full rounded-xl" />
+                  <Image src={image} alt={`${product.name} 상세 이미지 ${index + 1}`} width={1000} height={1000} className="w-full rounded-xl max-w-[800px] mx-auto" />
                 </div>
               ))}
             </div>
