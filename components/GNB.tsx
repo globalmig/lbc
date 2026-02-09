@@ -84,19 +84,12 @@ export default function GNB() {
             aria-controls="mobile-menu"
           >
             <span className="sr-only">Menu</span>
-            <span
-              className={`absolute block h-0.5 w-6 bg-white transition-transform duration-200 ${isMenuOpen ? "rotate-45" : "-translate-y-2"}`}
-            />
+            <span className={`absolute block h-0.5 w-6 bg-white transition-transform duration-200 ${isMenuOpen ? "rotate-45" : "-translate-y-2"}`} />
             <span className={`absolute block h-0.5 w-6 bg-white transition-opacity duration-200 ${isMenuOpen ? "opacity-0" : "opacity-100"}`} />
-            <span
-              className={`absolute block h-0.5 w-6 bg-white transition-transform duration-200 ${isMenuOpen ? "-rotate-45" : "translate-y-2"}`}
-            />
+            <span className={`absolute block h-0.5 w-6 bg-white transition-transform duration-200 ${isMenuOpen ? "-rotate-45" : "translate-y-2"}`} />
           </button>
 
-          <div
-            className={`fixed inset-0 top-16 z-40 md:hidden ${isMenuOpen ? "pointer-events-auto" : "pointer-events-none"}`}
-            aria-hidden={!isMenuOpen}
-          >
+          <div className={`fixed inset-0 top-16 z-40 md:hidden ${isMenuOpen ? "pointer-events-auto" : "pointer-events-none"}`} aria-hidden={!isMenuOpen}>
             <button
               type="button"
               className={`absolute inset-0 bg-black/50 transition-opacity duration-200 ${isMenuOpen ? "opacity-100" : "opacity-0"}`}
@@ -127,4 +120,3 @@ export default function GNB() {
     </header>
   );
 }
-

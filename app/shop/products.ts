@@ -291,14 +291,14 @@ export const products: Product[] = [
     detailImages: ["/img/products/detail_water_03_1.gif", "/img/products/detail_water_03_2.gif"],
   },
 
-  // 농자제 제품@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  // 농자재 제품@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   {
     slug: "agri-growth-a",
     name: "비청 플러스",
-    category: "농자제",
+    category: "농자재",
     listImage: "/img/products/B_01.png",
     detailImage: "/img/products/B_01.png",
-    summary: "모든 농작물에 폭넓게 적용 가능한 엽면시비용 농자제입니다.",
+    summary: "모든 농작물에 폭넓게 적용 가능한 엽면시비용 농자재입니다.",
     features: ["적용 작물: 수도작, 전작, 원예(노지/시설), 과수, 특작, 화훼, 약초 등", "희석 배수: 500배, 1,000배, 1,500배", "7~10일 간격 정기 살포 권장"],
     specs: [
       { label: "용량", value: "1L" },
@@ -315,10 +315,10 @@ export const products: Product[] = [
   {
     slug: "agri-growth-b",
     name: "비청 실로암",
-    category: "농자제",
+    category: "농자재",
     listImage: "/img/products/B_02.png",
     detailImage: "/img/products/B_02.png",
-    summary: "전작부터 과수까지 폭넓게 적용 가능한 살포/관주용 농자제입니다.",
+    summary: "전작부터 과수까지 폭넓게 적용 가능한 살포/관주용 농자재입니다.",
     features: ["적용 작물: 전작, 원예(노지/시설), 과수, 특작, 화훼, 약초 등", "사용량: 500배, 1,000배액 살포", "5일 간격 정기 살포 및 관주 권장"],
     specs: [
       { label: "용량", value: "2L" },
@@ -335,11 +335,11 @@ export const products: Product[] = [
   },
   {
     slug: "agri-growth-c",
-    name: "농자제 감마",
-    category: "농자제",
+    name: "농자재 인산칼슘",
+    category: "농자재",
     listImage: "/img/products/B_03.png",
     detailImage: "/img/products/B_03.png",
-    summary: "전작부터 과수까지 적용 가능한 살포/관주용 농자제입니다.",
+    summary: "전작부터 과수까지 적용 가능한 살포/관주용 농자재입니다.",
     features: ["적용 작물: 전작, 원예(노지/시설), 과수, 특작, 화훼, 약초 등", "사용량: 500배, 1,000배, 1,500배액 살포", "5일 간격 정기 살포 및 관주 권장"],
     specs: [
       { label: "용량", value: "1L" },
@@ -356,11 +356,11 @@ export const products: Product[] = [
   },
   {
     slug: "agri-growth-d",
-    name: "농자제 델타",
-    category: "농자제",
+    name: "농자재 한아름",
+    category: "농자재",
     listImage: "/img/products/B_04.png",
     detailImage: "/img/products/B_04.png",
-    summary: "전작부터 과수까지 적용 가능한 엽면시비/관주용 농자제입니다.",
+    summary: "전작부터 과수까지 적용 가능한 엽면시비/관주용 농자재입니다.",
     features: ["적용 작물: 전작, 원예(노지/시설), 과수, 특작, 화훼, 약초 등", "엽면시비 500배액 살포 (물 500L/1L)", "관주: 150~200평 기준 1L~2L 사용"],
     specs: [
       { label: "용량", value: "1L" },
@@ -375,11 +375,11 @@ export const products: Product[] = [
   },
   {
     slug: "agri-growth-e",
-    name: "농자제 엡실론",
-    category: "농자제",
+    name: "농자재 넘버원",
+    category: "농자재",
     listImage: "/img/products/B_05.png",
     detailImage: "/img/products/B_05.png",
-    summary: "토양개선과 과실품질 관리에 활용 가능한 엽면시비/관주용 농자제입니다.",
+    summary: "토양개선과 과실품질 관리에 활용 가능한 엽면시비/관주용 농자재입니다.",
     features: ["적용 작물: 전작, 원예(노지/시설), 과수, 특작, 화훼, 약초 등", "효과: 토양개선, 과실품질, 염류해소, pH 조절", "화본과/과수 모두 생육 단계별 수시 사용 가능"],
     specs: [
       { label: "용량", value: "1L" },

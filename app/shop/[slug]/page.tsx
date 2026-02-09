@@ -35,7 +35,7 @@ export default function page({ params }: PageProps) {
           </div>
 
           <div className="w-full border-2 rounded-2xl border-black/10 bg-white shadow-sm">
-            <Image src={product.detailImage} alt={product.name} width={1000} height={1000} className="w-full rounded-2xl" priority />
+            <Image src={product.detailImage} alt={product.name} width={1000} height={1000} className="w-full max-w-[800px] mx-auto rounded-2xl" priority />
           </div>
 
           <div className="grid lg:grid-cols-2 gap-10">
