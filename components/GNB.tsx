@@ -54,8 +54,8 @@ export default function GNB() {
     <header className={`fixed md:absolute top-0 left-0 z-50 w-full ${containerBgClass}`}>
       <div className="relative left-1/2 flex h-16 w-full max-w-[1440px] -translate-x-1/2 items-center justify-between px-4 md:h-20 md:px-8 white-text">
         <Link href="/" className="block">
-          <Image src="/logo_white.png" alt="LK관세사무소" width={280} height={40} className="hidden md:block" priority />
-          <Image src="/logo_white.png" alt="LK관세사무소" width={150} height={36} className="block md:hidden" priority />
+          <Image src="/logo_long.png" alt="lbc 로고" width={280} height={40} className="hidden md:block" priority />
+          <Image src="/logo_long.png" alt="lbc 로고" width={150} height={36} className="block md:hidden" priority />
         </Link>
 
         <nav aria-label="Global navigation">

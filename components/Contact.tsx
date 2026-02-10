@@ -12,13 +12,13 @@ export default function ContactSection() {
   };
 
   return (
-    <div className="relative min-h-[500px] py-16 w-full bg-cover bg-center bg-no-repeat flex flex-col justify-center items-start" style={{ backgroundImage: 'url("/img/bg_contact.jpg")' }}>
+    <div className="relative min-h-[500px] py-8 w-full bg-cover bg-center bg-no-repeat flex flex-col justify-center items-start" style={{ backgroundImage: 'url("/img/bg_contact.jpg")' }}>
       {/* 반투명 오버레이 */}
       <div className="absolute inset-0 bg-sky-950/80"></div>
 
       <div className="relative px-4 max-w-[1440px] w-full mx-auto text-white">
-        <h3 className="text-sky-300 font-semibold text-lg">Contact Us</h3>
-        <h2 className="mt-4 text-3xl md:text-4xl font-bold">1:1 상담 문의</h2>
+        <h2 className="text-sky-300 font-semibold ">Contact Us</h2>
+        {/* <h2 className="mt-4 text-3xl md:text-4xl font-bold">1:1 상담 문의</h2> */}
 
         <div className="mt-6 space-y-3 text-gray-100 leading-relaxed">
           <p>
@@ -32,7 +32,7 @@ export default function ContactSection() {
         </div>
 
         {/* 연락 수단 */}
-        <div className="mt-8 flex flex-col gap-4">
+        <div className="mt-4 flex flex-col gap-4">
           {/* 아이콘 리스트 */}
           <div className="flex gap-6">
             {/* <button onClick={() => toggle("kakao")} className={`p-3 rounded-full bg-white/10 hover:bg-white/20 transition ${open === "kakao" ? "bg-white/30" : ""}`} aria-label="카카오톡">
@@ -53,7 +53,7 @@ export default function ContactSection() {
           </div>
 
           {/* 정보 노출 영역 */}
-          <div className="mt-4 min-h-[40px]">
+          <div className="mb-4 min-h-[40px]">
             {/* {open === "kakao" && <p className="text-lg font-semibold animate-fade-slide text-sky-500">카톡 ID: lkcus</p>} */}
             {open === "email" && (
               <a href="bc3705@naver.com" className="text-lg font-semibold underline text-sky-500 hover:text-sky-300 animate-fade-slide">
@@ -74,7 +74,7 @@ export default function ContactSection() {
         </div>
 
         {/* 문의 버튼 */}
-        <Link href={"/board"} className="inline-block  rounded-md py-3 px-16 mt-10 bg-white text-zinc-700  hover:bg-sky-300 hover:text-zinc-600 f text-center  font-bold shadow-sm">
+        <Link href={"/board"} className="inline-block  rounded-md py-3 px-16 bg-white text-zinc-700  hover:bg-sky-300 hover:text-zinc-600 f text-center  font-bold shadow-sm">
           문의하기
         </Link>
       </div>

@@ -70,7 +70,7 @@ export default function page() {
   const btnClass = (active: boolean) => (active ? `${btnBase} bg-black text-white hover:bg-black hover:text-white` : `${btnBase} bg-white hover:bg-blue-50 hover:text-black`);
 
   return (
-    <div className="bg-[#fcfbfd]">
+    <div className="bg-[#ffffff]">
       <section className="relative min-h-[360px] md:min-h-[700px] text-white flex items-center">
         <div className="absolute inset-0 overflow-hidden">
           <Image src="/img/bg_main.png" alt="Shop Hero Background" fill sizes="100vw" className="object-cover object-bottom" priority />
@@ -102,7 +102,7 @@ export default function page() {
           </div> */}
         </div>
 
-        <div className="grid grid-cols-4 gap-3 md:gap-4 max-w-[1440px] mb-10">
+        <div className="grid grid-cols-4 gap-3 md:gap-4 max-w-[1440px] mb-10 text-lg">
           <button className={btnClass(activeTab === "all")} aria-pressed={activeTab === "all"} onClick={() => selectTab("all")}>
             전체
           </button>
@@ -140,12 +140,12 @@ export default function page() {
                       <Image src={product.listImage} alt={product.name} width={1000} height={1000} className="object-cover group-hover:scale-105 transition duration-500" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                       <div className="absolute left-4 bottom-4 text-white">
-                        <p className="text-xs tracking-widest text-white/70">{product.category}</p>
-                        <h4 className="text-lg md:text-xl font-semibold">{product.name}</h4>
+                        {/* <p className="text-xs tracking-widest text-white/70">{product.category}</p>
+                        <h4 className="text-lg md:text-xl font-semibold">{product.name}</h4> */}
                       </div>
                     </div>
                     <div className="p-6">
-                      <p className="text-sm text-black/60">{product.summary}</p>
+                      <p className="text-sm text-black/60 whitespace-pre-line">{product.summary}</p>
                     </div>
                   </Link>
                 ))}
