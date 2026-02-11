@@ -20,18 +20,14 @@ export default function page({ params }: PageProps) {
   }
 
   return (
-    <div className="bg-[#f6f4ef]">
-      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 pt-10 md:pt-16">
-        <Link href="/shop" className="inline-flex items-center gap-2 text-sm text-black/60 hover:text-black">
-          상품 리스트로 돌아가기
-        </Link>
-      </section>
-
+    <div className="bg-[#f6f4ef] pt-16">
       <section className="max-w-[1440px] mx-auto px-4 sm:px-6 py-10 md:py-16">
         <div className="flex flex-col gap-10">
           <div>
             <p className="text-sm tracking-[0.3em] text-black/50">{product.category}</p>
-            <h1 className="mt-3 text-3xl md:text-4xl font-semibold">{product.name}</h1>
+
+            <h1 className="mt-3 text-3xl md:text-4xl font-semibold border-l-green-700 border-l-8 pl-4">{product.name}</h1>
+            <p className="text-slate-700/80">{product.summary}</p>
           </div>
 
           <div className="w-full border-2 rounded-2xl border-black/10 bg-white shadow-sm">

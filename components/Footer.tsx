@@ -5,9 +5,9 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <div className="py-10 bg-slate-800 text-white/60 text-center mx-auto">
-      <Link href={"/"} className="flex justify-center font-bold pb-6 opacity-40">
-        <Image src={"/logo_white.png"} alt="LK관세사무소" width={140} height={40} className="hidden md:block" />
-        <Image src={"/logo_white.png"} alt="LK관세사무소" width={80} height={40} className="md:hidden block" />
+      <Link href={"/"} className="flex justify-center font-bold pb-6 opacity-100">
+        <Image src={"/logo_long.png"} alt="lbc로고" width={320} height={40} className="hidden md:block" />
+        <Image src={"/logo_long.png"} alt="lbc로고" width={80} height={40} className="md:hidden block" />
       </Link>
       <div className="flex gap-4 justify-center">
         <p className="text-sm">대표이사: 김영순</p>

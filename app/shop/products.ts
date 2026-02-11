@@ -392,4 +392,27 @@ export const products: Product[] = [
     ],
     detailImages: ["/img/products/detail_B_05_01.png"],
   },
+  {
+    slug: "agri-growth-ed",
+    name: "농자재 일오삼",
+    category: "농자재",
+    listImage: "/img/products/BC_06.png",
+    detailImage: "/img/products/BC_06.png",
+    summary: "토양속의 물을 정화시키고 각종 병원균 및 바이러스의 침입을 막아주고 병충해의 피해를 감소시키는 농자재입니다.",
+    features: [
+      "수도작: 미질향상, 수확량 증대, 도복방지 병충해 저항성 증진",
+      "과수류: 연작장해 해결, 산성토양 중화, 병충해에 대한 저항성 증진, 새뿌리 발육 촉진",
+      "기타: 산성토양 중화 연작 및 염류장해 경감미생물 활동 활성화, 토양수 정화로 병원성균 감염차단",
+    ],
+    specs: [
+      { label: "실중량", value: "10kg" },
+      { label: "적용 작물", value: "전자물 (노지, 시설) 사용가능" },
+      { label: "효과", value: "토양개선, 과실품질 향상, 염류해소, pH 조절" },
+      { label: "사용시기(수도작)", value: "이양 15~30일전 100평당 10kg 살포 후 경운" },
+      { label: "사용시기(전작)", value: "정식 15~30일전 100평당 10kg 토양살포 후 경운" },
+      { label: "사용시기(과수류)", value: "12월에서 3월 초순사이 과목주위 중심 100평당 10kg 살포" },
+      { label: "사용방법", value: "토양살포, 추비 사용 가능" },
+    ],
+    detailImages: ["/img/products/detail_B_06_01.png"],
+  },
 ];
