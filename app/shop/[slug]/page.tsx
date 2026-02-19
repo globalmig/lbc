@@ -24,7 +24,7 @@ export default function page({ params }: PageProps) {
       <section className="max-w-[1440px] mx-auto px-4 sm:px-6 py-10 md:py-16">
         <div className="flex flex-col gap-10">
           <div>
-            <p className="text-sm tracking-[0.3em] text-black/50">{product.category}</p>
+            {/* <p className="text-sm tracking-[0.3em] text-black/50">{product.category}</p> */}
 
             <h1 className="mt-3 text-3xl md:text-4xl font-semibold border-l-green-700 border-l-8 pl-4">{product.name}</h1>
             <p className="text-slate-700/80">{product.summary}</p>
@@ -36,7 +36,7 @@ export default function page({ params }: PageProps) {
 
           <div className="grid lg:grid-cols-2 gap-10">
             <div className="rounded-2xl border-2 border-black/10 bg-white p-6 shadow-sm">
-              <h2 className="text-lg font-semibold">제품 특징</h2>
+              <h2 className="text-lg md:text-3xl font-bold">제품 특징</h2>
               <ul className="mt-4 space-y-2 text-sm text-black/60">
                 {product.features.map((feature) => (
                   <li key={feature} className="flex gap-2">
@@ -48,7 +48,7 @@ export default function page({ params }: PageProps) {
             </div>
 
             <div className="rounded-2xl border-2 border-black/10 bg-white p-6 shadow-sm">
-              <h2 className="text-lg font-semibold">제품 사양</h2>
+              <h2 className="text-lg md:text-3xl font-bold">제품 사양</h2>
               <dl className="mt-4 grid gap-3 text-sm text-black/60">
                 {product.specs.map((spec) => (
                   <div key={spec.label} className="flex items-start justify-between gap-4 border-b border-black/5 pb-2">

@@ -138,14 +138,14 @@ export default function page() {
                   >
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <Image src={product.listImage} alt={product.name} width={1000} height={1000} className="object-cover group-hover:scale-105 transition duration-500" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
                       <div className="absolute left-4 bottom-4 text-white">
                         {/* <p className="text-xs tracking-widest text-white/70">{product.category}</p>
                         <h4 className="text-lg md:text-xl font-semibold">{product.name}</h4> */}
                       </div>
                     </div>
                     <div className="p-6">
-                      <p className="text-sm text-black/60 whitespace-pre-line">{product.summary}</p>
+                      <p className="text-sm text-black/90 whitespace-pre-line">{product.summary}</p>
                     </div>
                   </Link>
                 ))}

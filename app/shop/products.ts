@@ -21,7 +21,7 @@ export const products: Product[] = [
     name: "비청 머드마리비누",
     category: "비누",
     listImage: "/img/products/sample_shop_01.png",
-    detailImage: "/img/products/detail_shop_01.png",
+    detailImage: "/img/products/detail_shop_02.png",
     summary: "비청 머드마리비누는 발모 및 피부재생 촉진용 광물질 조성물로 만들어진 최고급 벤토나이트성분이 함유된 특허받은 신비의 비누입니다.",
     features: ["쇼핑몰참고"],
     specs: [
@@ -239,7 +239,7 @@ export const products: Product[] = [
   //   ],
   // },
   {
-    slug: "bicheong-water-powder",
+    slug: "bicheong-water-powder-b",
     name: "비청 수처리 파우더",
     category: "수처리제",
     listImage: "/img/products/water_03.png",
@@ -275,7 +275,7 @@ export const products: Product[] = [
     detailImages: ["/img/products/detail_water_01_33.png", "/img/products/detail_water_01_4.png", "/img/products/detail_water_01_5.png", "/img/products/detail_water_01_6.png"],
   },
   {
-    slug: "bicheong-water-powder",
+    slug: "bicheong-water-powder-c",
     name: "비청 수처리 파우더",
     category: "수처리제",
     listImage: "/img/products/water_04.png",
@@ -335,7 +335,7 @@ export const products: Product[] = [
   },
   {
     slug: "agri-growth-c",
-    name: "농자재 인산칼슘",
+    name: "비청 인산칼슘",
     category: "농자재",
     listImage: "/img/products/BC_03.png",
     detailImage: "/img/products/BC_03.png",
@@ -356,7 +356,7 @@ export const products: Product[] = [
   },
   {
     slug: "agri-growth-d",
-    name: "농자재 한아름",
+    name: "비청 한아름",
     category: "농자재",
     listImage: "/img/products/BC_04.png",
     detailImage: "/img/products/BC_04.png",
@@ -375,7 +375,7 @@ export const products: Product[] = [
   },
   {
     slug: "agri-growth-e",
-    name: "농자재 넘버원",
+    name: "비청 넘버원",
     category: "농자재",
     listImage: "/img/products/BC_05.png",
     detailImage: "/img/products/BC_05.png",

@@ -110,7 +110,7 @@ export default function company() {
               <br className="hidden md:block" />
               원천 기술과 적용 분야
             </h2>
-            <p className="text-black/60 mt-4 sm:mt-5 leading-relaxed md:leading-8 break-keep">
+            <p className="text-black/80 mt-4 sm:mt-5 leading-relaxed md:leading-8 break-keep">
               천연 미네랄 기반 원료 정제와 공정 표준화를 통해 품질 일관성을 확보하고, 토양·수질·농축수산·생활/바이오 등 다양한 산업 영역으로 확장 가능한 응용 기술을 소개합니다.
             </p>
 
@@ -124,8 +124,8 @@ export default function company() {
 
           <div className="lg:col-span-5">
             <div className="border-2 border-emerald-100/60 rounded-2xl p-6 md:p-8 bg-emerald-50/40 shadow-sm">
-              <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden">
-                <Image src="/img/vision.png" alt="Technology visual" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-contain" />
+              <div className="relative w-full aspect-[4/4] rounded-xl overflow-hidden">
+                <Image src="/img/vision.png" alt="Technology visual" fill sizes="(max-width: 1440px) 100vw, 40vw" className="object-contain" />
               </div>
               <p className="text-sm text-black/50 mt-4 break-keep">* 소재 이미지/공정 도식 이미지로 교체하면 전문성이 더 올라갑니다.</p>
             </div>
