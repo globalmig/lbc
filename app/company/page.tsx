@@ -103,8 +103,8 @@ export default function company() {
       </section>
 
       <section className="py-24">
-        <div className="grid lg:grid-cols-12 gap-8 md:gap-10 items-start max-w-[1440px] mx-auto px-4">
-          <div className="lg:col-span-7">
+        <div className="grid lg:grid-cols-12 gap-8 md:gap-10 items-start max-w-[1440px] w-full mx-auto px-4">
+          <div className="lg:col-span-5">
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight leading-snug break-keep">
               수용성 복합 규산염 기술
               <br className="hidden md:block" />
@@ -122,10 +122,10 @@ export default function company() {
             </div>
           </div>
 
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-7">
             <div className="border-2 border-emerald-100/60 rounded-2xl p-6 md:p-8 bg-emerald-50/40 shadow-sm">
-              <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden">
-                <Image src="/img/vision.png" alt="Technology visual" fill sizes="(max-width: 2000px) 120vw, 70vw" className="object-contain scale-110 md:scale-125" />
+              <div className="relative w-full aspect-[5/5] rounded-xl overflow-hidden">
+                <Image src="/img/vision.png" alt="Technology visual" fill sizes="(max-width: 2000px) 120vw, 70vw" className="object-contain scale-110 md:scale-100" />
               </div>
               <p className="text-sm text-black/50 mt-4 break-keep">* 소재 이미지/공정 도식 이미지로 교체하면 전문성이 더 올라갑니다.</p>
             </div>
