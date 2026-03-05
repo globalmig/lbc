@@ -145,7 +145,7 @@ export default function page() {
                       </div>
                     </div>
                     <div className="p-6">
-                      <p className="text-sm text-black/90 whitespace-pre-line">{product.summary}</p>
+                      <p className="text-base md:text-lg text-black/90 whitespace-pre-line">{product.summary}</p>
                     </div>
                   </Link>
                 ))}

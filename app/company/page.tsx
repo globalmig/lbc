@@ -124,8 +124,8 @@ export default function company() {
 
           <div className="lg:col-span-5">
             <div className="border-2 border-emerald-100/60 rounded-2xl p-6 md:p-8 bg-emerald-50/40 shadow-sm">
-              <div className="relative w-full aspect-[4/4] rounded-xl overflow-hidden">
-                <Image src="/img/vision.png" alt="Technology visual" fill sizes="(max-width: 1440px) 100vw, 40vw" className="object-contain" />
+              <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden">
+                <Image src="/img/vision.png" alt="Technology visual" fill sizes="(max-width: 2000px) 120vw, 70vw" className="object-contain scale-110 md:scale-125" />
               </div>
               <p className="text-sm text-black/50 mt-4 break-keep">* 소재 이미지/공정 도식 이미지로 교체하면 전문성이 더 올라갑니다.</p>
             </div>

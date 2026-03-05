@@ -27,7 +27,7 @@ export default function page({ params }: PageProps) {
             {/* <p className="text-sm tracking-[0.3em] text-black/50">{product.category}</p> */}
 
             <h1 className="mt-3 text-3xl md:text-4xl font-semibold border-l-green-700 border-l-8 pl-4">{product.name}</h1>
-            <p className="text-slate-700/80">{product.summary}</p>
+            <p className="text-base md:text-2xl text-black">{product.summary}</p>
           </div>
 
           <div className="w-full border-2 rounded-2xl border-black/10 bg-white shadow-sm">
@@ -36,11 +36,11 @@ export default function page({ params }: PageProps) {
 
           <div className="grid lg:grid-cols-2 gap-10">
             <div className="rounded-2xl border-2 border-black/10 bg-white p-6 shadow-sm">
-              <h2 className="text-lg md:text-3xl font-bold">제품 특징</h2>
-              <ul className="mt-4 space-y-2 text-sm text-black/60">
+              <h2 className="text-lg md:text-3xl font-bold mb-10">제품 특징</h2>
+              <ul className="mt-4 space-y-2 text-base md:text-xl text-black/90">
                 {product.features.map((feature) => (
                   <li key={feature} className="flex gap-2">
-                    <span className="mt-1 h-1.5 w-1.5 rounded-full bg-black/40" aria-hidden="true" />
+                    <span className="mt-1 h-1.5 w-1.5 rounded-full bg-black/90" aria-hidden="true" />
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -48,8 +48,8 @@ export default function page({ params }: PageProps) {
             </div>
 
             <div className="rounded-2xl border-2 border-black/10 bg-white p-6 shadow-sm">
-              <h2 className="text-lg md:text-3xl font-bold">제품 사양</h2>
-              <dl className="mt-4 grid gap-3 text-sm text-black/60">
+              <h2 className="text-lg md:text-3xl font-bold mb-10">제품 사양</h2>
+              <dl className="mt-4 grid gap-3 text-base md:text-xl text-black/90">
                 {product.specs.map((spec) => (
                   <div key={spec.label} className="flex items-start justify-between gap-4 border-b border-black/5 pb-2">
                     <dt className="font-medium text-black/70">{spec.label}</dt>
