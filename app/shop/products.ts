@@ -154,7 +154,7 @@ export const products: Product[] = [
   // 수처리제 제품!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   {
     slug: "bicheong-waterclean-a",
-    name: "비청 씨크린 10L (해수용)",
+    name: "비청 씨크린 10L",
     category: "수처리제",
     listImage: "/img/products/water_01.png",
     detailImage: "/img/products/detail_water_01.gif",
@@ -240,11 +240,12 @@ export const products: Product[] = [
   // },
   {
     slug: "bicheong-water-powder-b",
-    name: "비청 수처리 파우더",
+    name: "비청 씨크린 500ml",
     category: "수처리제",
     listImage: "/img/products/water_03.png",
     detailImage: "/img/products/detail_water_03.png",
-    summary: "분말 타입으로 보관이 쉬운 수처리 전용 파우더입니다.",
+    summary:
+      "비청씨크린은 규석을 특수제법으로 정제하여 추출한 복합수용성규산염으로, 적조 및 녹조 발생 원인인 독성 플랑크톤 코클로디니움을 억제하며, 22종 이상의 다양한 천연 미네랄을 풍부하게 함유하고 있는 무독성의 제품입니다.",
     features: [
       "먹는 물 관리법 제18조 제2항 규정에 의한 성분",
       "산화 이온 환원성 물질",
