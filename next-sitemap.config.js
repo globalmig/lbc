@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://www.lbcbio.com", // 실제 도메인
+  siteUrl: "https://lbcbio.com", // 실제 도메인
   generateRobotsTxt: true, // robots.txt도 같이 생성
   sitemapSize: 7000,
   changefreq: "weekly",

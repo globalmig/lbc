@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.lbcbio.com
+Host: https://lbcbio.com
 
 # Sitemaps
-Sitemap: https://www.lbcbio.com/sitemap.xml
+Sitemap: https://lbcbio.com/sitemap.xml
